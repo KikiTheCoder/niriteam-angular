@@ -1,0 +1,12 @@
+<nav>
+    <div id="nav-button">
+        <button (click)="extended = !extended">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+    <div id="nav-content" *ngIf="extended">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+    </div>
+</nav>
