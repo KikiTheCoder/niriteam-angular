@@ -5,11 +5,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 @Component({
-  selector: 'app-animation1',
-  templateUrl: './animation1.component.html',
-  styleUrls: ['./animation1.component.sass']
+  selector: 'app-home',
+  templateUrl: './page-home.component.html',
+  styleUrls: ['./page-home.component.sass']
 })
-export class Animation1Component implements OnInit {
+export class PageHomeComponent implements OnInit {
 
   constructor() { }
 
