@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Animation1Component } from './animation1/animation1.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule} from '@angular/material/icon';
 import { NavComponent } from './nav/nav.component'; 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NavComponent } from './nav/nav.component';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

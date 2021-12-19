@@ -29,12 +29,19 @@ export class Animation1Component implements OnInit {
       color: "transparent",
       display: "none"
     })
-    .from("._anim_header1", {
+    .set("#header-niri", {
+      display: "block"
+    })
+    .from("#header-we-are", {
       duration: 1,
       ease: "power1.inOut",
       color: "transparent",
-      display: "none",
-      stagger: 1
+      display: "none"
+    }).from("#header-niri", {
+      duration: 1,
+      ease: "power1.inOut",
+      color: "transparent",
+      display: "none"
     })
 
     gsap.timeline({repeat: -1})

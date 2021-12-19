@@ -5,8 +5,10 @@
         </button>
     </div>
 
-    <div id="nav-content" *ngIf="extended">
+    <div id="nav-content" *ngIf="extended" @navToggle>
+        <div id="link-wrapper">
             <a href="/">Home</a>
             <a href="/about">About</a>
+        </div>
     </div>
 </nav>

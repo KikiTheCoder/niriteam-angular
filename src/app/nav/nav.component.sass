@@ -2,7 +2,7 @@
     position: fixed
     right: 20px
     top: 20px
-    z-index: 100
+    z-index: 200
 
     :hover
         background-color: #2e302e
@@ -24,22 +24,29 @@
 #nav-content
     position: fixed
     z-index: 100
-    right: 80px
-    top: 20px
-    background-color: #131413
-    padding: 20px
-    border: solid 2px #ffffff
-    border-radius: 5px
-    width: 80px
+    right: 0px
+    bottom: 0px
+    left: 0px
+    height: 100vh
+    width: 100vw
+    background-color: #131413fb
+    display: flex
 
-    a
-        color: #ffffff
-        text-decoration: none
-        padding: 10px
-        display: block
-        margin-right: 10px
+    #link-wrapper
+        text-align: center
+        display: flex
+        flex-direction: column
+        margin: auto
 
-        &:hover
-            text-decoration-line: underline
-            text-decoration-style: double
-            text-decoration-color: #ffffff
+        a
+            color: #ffffff
+            text-decoration: none
+            padding: 10px
+            display: block
+            margin-right: 10px
+            font-size: 1.3rem
+
+            &:hover
+                text-decoration-line: underline
+                text-decoration-style: double
+                text-decoration-color: #ffffff
