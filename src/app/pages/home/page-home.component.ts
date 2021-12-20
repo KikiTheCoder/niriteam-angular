@@ -1,5 +1,5 @@
 import { trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -9,12 +9,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
   templateUrl: './page-home.component.html',
   styleUrls: ['./page-home.component.sass']
 })
-export class PageHomeComponent implements OnInit {
+export class PageHomeComponent implements OnInit, OnDestroy {
 
   constructor() { }
 
+  ngOnDestroy(): void {
+    let tr = ScrollTrigger.getAll()
+    tr.forEach((tr) => tr.kill())
+  }
+
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger);
+    setTimeout(() => {
+      ScrollTrigger.refresh()
+    }, 5)
+
 
     gsap.timeline()
     .from("#header-hello", {
@@ -56,12 +64,16 @@ export class PageHomeComponent implements OnInit {
     })
 
     gsap.to("#section2", {
-      x: -window.innerWidth,
+      x: () => `${window.innerWidth * -1}`,
       scrollTrigger: {
         scrub: 1,
-        trigger: "#section1",
+        trigger: "#main1_group",
         pin: "#main1_group",
-        snap: 1
+        start: "0px 0px",
+        snap: 1,
+        markers: true,
+        id: "test1",
+        invalidateOnRefresh: true
       }
     })
   }
