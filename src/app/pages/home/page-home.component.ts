@@ -71,8 +71,6 @@ export class PageHomeComponent implements OnInit, OnDestroy {
         pin: "#main1_group",
         start: "0px 0px",
         snap: 1,
-        markers: true,
-        id: "test1",
         invalidateOnRefresh: true
       }
     })
