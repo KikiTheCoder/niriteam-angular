@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hello-angular-gsap": {
+    "niriteam-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hello-angular-gsap",
+            "outputPath": "dist/niriteam-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hello-angular-gsap:build:production"
+              "browserTarget": "niriteam-angular:build:production"
             },
             "development": {
-              "browserTarget": "hello-angular-gsap:build:development"
+              "browserTarget": "niriteam-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hello-angular-gsap:build"
+            "browserTarget": "niriteam-angular:build"
           }
         },
         "test": {
@@ -112,5 +112,5 @@
       }
     }
   },
-  "defaultProject": "hello-angular-gsap"
+  "defaultProject": "niriteam-angular"
 }
